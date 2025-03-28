@@ -29,9 +29,9 @@ npm install
 
 ### Create a `.env` file and Add the Following Variables:
 ```plaintext
-PORT=3000
-MONGO_URI=your_mongodb_connection_string
-SESSION_SECRET=your_session_secret
+PORT=...
+MONGO_URI=...
+SESSION_SECRET=...
 ```
 
 ### Start the Server:
