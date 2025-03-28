@@ -1,16 +1,16 @@
 # video-streaming-backend
-A RESTful API backend built with Node.js, Express.js, and MongoDB for a YouTube-like video streaming application. Supports video uploads, user authentication, comments, likes, trending videos, and playlist management.
+This is a RESTful API backend project build with node.js express.js and mongoDB for a video streaming application.
 
 ---
 
 This API supports:
 
-- **Video Uploads** (File uploads using Multer)
-- **Trending Videos** (Trending algorithm implementation)
-- **Likes & Dislikes** (User interactions)
-- **Comments System** (Adding and managing comments)
-- **Playlists** (Users can create video playlists)
-- **Session-based Authentication** (User authentication using Express sessions)
+- **Video Uploads**
+- **Trending Videos**
+- **Likes & Dislikes**
+- **Comments System**
+- **Playlists**
+- **Session-based Authentication**
 
 ---
 
@@ -102,12 +102,12 @@ npm start
 ---
 
 ## Technologies Used
-- **Node.js** (Backend runtime environment)
-- **Express.js** (RESTful API framework)
-- **MongoDB** (Database)
-- **Multer** (File uploading middleware)
-- **Express-Session** (Session-based authentication)
-- **Mongoose** (MongoDB Object Data Modeling)
+- **Node.js**
+- **Express.js**
+- **MongoDB**
+- **Multer**
+- **Express-Session**
+- **Mongoose**
 
 ---
 
