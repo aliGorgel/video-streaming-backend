@@ -32,6 +32,8 @@ npm install
 PORT=...
 MONGO_URI=...
 SESSION_SECRET=...
+EMAIL_USER:...
+EMAIL_PASSWORD:...
 ```
 
 ### Start the Server:
@@ -43,7 +45,7 @@ npm start
 
 ## API Endpoints
 
-### Authentication (Auth)
+### Authentication
 | Method | Endpoint | Description |
 |--------|---------|-------------|
 | POST | `/auth/signup` | Register a new user |
@@ -61,6 +63,7 @@ npm start
 | PUT | `/user/update-user` | Update username and password |
 | PUT | `/user/update-role` | Change user role (admin, premium, etc.) |
 | POST | `/user/upload-profile` | Upload or update profile image |
+| DELETE | `/user/delete-user` | Delete user from database |
 
 ---
 
@@ -68,36 +71,36 @@ npm start
 | Method | Endpoint | Description |
 |--------|---------|-------------|
 | GET | `/videos/all` | Fetch all videos |
-| GET | `/videos/:id` | Get video by ID |
+| GET | `/videos/:videoId` | Get video by ID |
 | GET | `/videos/trends` | Get trending videos (pagination supported) |
 | GET | `/videos` | Get videos by category (params: `page`, `category`) |
 | POST | `/videos/` | Upload a new video |
-| POST | `/videos/like-video/:id` | Like a video |
-| POST | `/videos/dislike-video/:id` | Dislike a video |
-| POST | `/videos/increment-view-count/:id` | Increment video view count |
-| DELETE | `/videos/:id` | Delete a video by ID |
+| POST | `/videos/like-video/:videoId` | Like a video |
+| POST | `/videos/dislike-video/:videoId` | Dislike a video |
+| POST | `/videos/increment-view-count/:videoId` | Increment video view count |
+| DELETE | `/videos/:videoId` | Delete a video by ID |
 
 ---
 
-### Playlists
+### Playlist Management
 | Method | Endpoint | Description |
 |--------|---------|-------------|
 | POST | `/playlists` | Create a new playlist |
 | POST | `/playlists/:playlistId/:videoId` | Add a video to a playlist |
-| PUT | `/playlists/:id` | Update playlist name |
-| GET | `/playlists/:id` | Get playlist by ID |
+| PUT | `/playlists/:playlistId` | Update playlist name |
+| GET | `/playlists/:playlistId` | Get playlist by ID |
 | GET | `/playlists` | Fetch all playlists |
 | DELETE | `/playlists/:playlistId/:videoId` | Remove a video from a playlist |
-| DELETE | `/playlists/:id` | Delete a playlist |
+| DELETE | `/playlists/:playlistId` | Delete a playlist |
 
 ---
 
-### Comments
+### Comment Management
 | Method | Endpoint | Description |
 |--------|---------|-------------|
 | POST | `/comments` | Add a comment to a video |
 | DELETE | `/comments/:id` | Delete a comment by ID |
-| GET | `/comments/:id` | Get all comments for a video |
+| GET | `/comments/:id/:page` | Get all comments for a video |
 
 ---
 
